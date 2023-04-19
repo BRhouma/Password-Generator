@@ -4,6 +4,8 @@ var generateBtn = document.querySelector("#generate");
 var length = 8;
 // variable numbers to be used
 var numbers = '0123456789';
+// variable special characters to use
+var specialCharacters = '!@#$%^&*()_+~`|}{[]\:;?><,./-=';
 
 
 
