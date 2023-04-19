@@ -2,6 +2,8 @@
 var generateBtn = document.querySelector("#generate");
 // variable for 8 character string
 var length = 8;
+// variable letters
+var letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
 // variable numbers to be used
 var numbers = '0123456789';
 // variable special characters to use
