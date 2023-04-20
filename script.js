@@ -59,9 +59,44 @@ function generatePassword() {
     else if (confirmLowercase && confirmNumber) {
         choices = alpha.concat(number);
 
+    } else if (confirmLowercase && confirmUppercase) {
+        choices = alpha.concat(alpha2);
+
+    } else if (confirmNumber && confirmUppercase) {
+        choices = number.concat(alpha2);
+    }
+
+    else if (confirmCharacter) {
+        choices = character;
+    }
+    else if (confirmNumber) {
+        choices = number;
+    }
+    else if (confirmLowercase) {
+        choices = alpha;
+    }
+
+    else if (confirmUppercase) {
+        choices = space.concat(alpha2);
     };
 
+
+    var password = [];
+
+
+    // creating random password
+    for (var i = 0; i < enter; i++) {
+        var pickChoices = choices[Math.floor(Math.random() * choices.length)];
+        password.push(pickChoices);
+    }
+    var ps = password.join("");
+    UserInput(ps);
+    return ps;
 }
+
+
+
+
 
 
 
