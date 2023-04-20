@@ -1,11 +1,12 @@
 
 
+
+
 var enter;
 var confirmNumber;
 var confirmCharacter;
 var confirmUppercase;
 var confirmLowercase;
-
 // variable characters
 character = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "\:", "\;", " < ", "=", " > ", " ? ", "@", "[", "\\", "]", " ^ ", "_", "`", "{", "|", "}", "~"];
 // variable numbers
@@ -20,6 +21,8 @@ var choices;
 var toUpper = function (x) {
     return x.toUpperCase();
 };
+
+alpha2 = alpha.map(toUpper);
 
 // query selector
 var get = document.querySelector("#generate");
