@@ -13,21 +13,44 @@ var specialCharacters = '!@#$%^&*()_+~`|}{[]\:;?><,./-=';
 
 // making questions to add character and how many between 8 & 128
 function generatePassword() {
-   
+
     enter = parseInt(prompt("How many characters would you like your password? Choose between 8 and 128"));
-  
+
     if (!enter) {
         alert("This needs a value");
-    }
+    } else if (enter < 8 || enter > 128) {
 
 
-function writePassword(password) {
-    var password = generatePassword();
-    var passwordText = document.querySelector("#password");
+        enter = parseInt(prompt());
 
-    passwordText.value = password;
+    } else {
 
-}
+        confirmNumber = confirm("Numbers?");
+        confirmCharacter = confirm("Characters?");
+        confirmUppercase = confirm("Uppercase letters?");
+        confirmLowercase = confirm("Lowercase letters?");
+    };
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+
+
+
+
+
+
+
+
+
+
+
+
+    
+// function writePassword(password) {
+//     var password = generatePassword();
+//     var passwordText = document.querySelector("#password");
+
+//     passwordText.value = password;
+
+// }
+
+// // Add event listener to generate button
+// generateBtn.addEventListener("click", writePassword);
