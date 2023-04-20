@@ -1,15 +1,26 @@
-// Assignment Code
-var generateBtn = document.querySelector("#generate");
-// variable for 8 character string
-var length = 8;
+
+// variable characters
+character = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "\:", "\;", " < ", "=", " > ", " ? ", "@", "[", "\\", "]", " ^ ", "_", "`", "{", "|", "}", "~"];
+// variable numbers
+number = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 // variable letters
-var letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
-// variable numbers to be used
-var numbers = '0123456789';
-// variable special characters to use
-var specialCharacters = '!@#$%^&*()_+~`|}{[]\:;?><,./-=';
+alpha = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
+space = [];
 
+var choices;
+
+var toUpper = function (x) {
+    return x.toUpperCase();
+};
+
+// query selector
+var get = document.querySelector("#generate");
+
+get.addEventListener("click", function () {
+    ps = generatePassword();
+    document.getElementById("password").placeholder = ps;
+});
 
 // making questions to add character and how many between 8 & 128
 function generatePassword() {
@@ -95,29 +106,18 @@ function generatePassword() {
 }
 
 
+function UserInput(ps) {
+    document.getElementById("password").textContent = ps;
 
+}
 
+var copy = document.querySelector("#copy");
+copy.addEventListener("click", function () {
+    copyPassword();
+});
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function writePassword(password) {
-//     var password = generatePassword();
-//     var passwordText = document.querySelector("#password");
-
-//     passwordText.value = password;
-
-// }
-
-// // Add event listener to generate button
-// generateBtn.addEventListener("click", writePassword);
+function copyPassword() {
+    document.getElementById("password").select();
+    document.execCommand("Copy");
+    alert("Password copied to clipboard!");
+}
