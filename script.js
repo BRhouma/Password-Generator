@@ -1,4 +1,12 @@
 
+
+
+
+var enter;
+var confirmNumber;
+var confirmCharacter;
+var confirmUppercase;
+var confirmLowercase;
 // variable characters
 character = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "\:", "\;", " < ", "=", " > ", " ? ", "@", "[", "\\", "]", " ^ ", "_", "`", "{", "|", "}", "~"];
 // variable numbers
@@ -13,6 +21,8 @@ var choices;
 var toUpper = function (x) {
     return x.toUpperCase();
 };
+
+alpha2 = alpha.map(toUpper);
 
 // query selector
 var get = document.querySelector("#generate");
@@ -110,11 +120,6 @@ function UserInput(ps) {
     document.getElementById("password").textContent = ps;
 
 }
-
-var copy = document.querySelector("#copy");
-copy.addEventListener("click", function () {
-    copyPassword();
-});
 
 function copyPassword() {
     document.getElementById("password").select();
