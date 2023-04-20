@@ -11,15 +11,21 @@ var specialCharacters = '!@#$%^&*()_+~`|}{[]\:;?><,./-=';
 
 
 
+// making questions to add character and how many between 8 & 128
 function generatePassword() {
+   
+    enter = parseInt(prompt("How many characters would you like your password? Choose between 8 and 128"));
   
-}
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+    if (!enter) {
+        alert("This needs a value");
+    }
 
-  passwordText.value = password;
+
+function writePassword(password) {
+    var password = generatePassword();
+    var passwordText = document.querySelector("#password");
+
+    passwordText.value = password;
 
 }
 
